@@ -1,0 +1,133 @@
+a {
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+
+a:hover {
+    color:rgb(184, 184, 184);
+}
+
+
+/* vertical menu */
+.menuitm {
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.list-menu {
+    padding-left: 0px;
+    margin-top: 0px;
+    list-style: none;
+}
+
+.menuitm:hover {
+    color:rgb(100, 100, 100);
+}
+
+.cat {
+    padding: 5px;
+    background-color: rgb(128, 128, 128);
+    
+}
+
+.cat:hover{
+    background-color: rgb(44, 44, 44);
+}
+
+.plain-list-v-left {
+    background-color: rgb(179, 179, 179);
+   /* position: relative;
+    left: auto; */
+    /*top: 0%;*/
+    grid-area: sidenav-l;
+}
+
+.plain-list-v-right {
+    background-color: rgb(179, 179, 179);
+   /* position: relative;
+    left: auto; */
+    /*top: 0%;*/
+    grid-area: sidenav-r;
+}
+
+.body {
+    /*position: relative;
+    top: auto;*/
+    /*right: 15%;*/
+    background-color: white;
+    color:rgb(0, 0, 0);
+    grid-area: main;
+    height: 100%;
+    padding-left: 5px;
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+    display: grid;
+    grid-template:
+        [header-left] "head head head" 93px [header-right]
+        [main-left] "sidenav-l main sidenav-r" 1fr [main-right]
+        [footer-left] "sidenav-l foot sidenav-r" 60px [footer-right]
+        / 100px 1fr 150px; 
+
+    font-family: "DejaVu Sans", Verdana;
+    font-size: 12px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.plain-header {
+   /* position: relative;
+    left: 15%; */
+    background-color: rgb(255, 255, 255);
+    color: black;
+    grid-area: head;
+}
+
+
+.plain-list-h {
+    padding-left: 5px;
+    padding-bottom: 10px;
+    padding-top : 5px;
+    grid-area: nav;
+    background-color: rgb(151, 151, 151);
+    border-top-color: rgb(43, 43, 43);
+    border-top-style: ridge;
+    border-top-width: 1px;
+    border-bottom-color: rgb(20, 20, 20);
+    border-bottom-style: ridge;
+    border-bottom-width: 1px;
+}
+
+.foot {
+    grid-area: foot;
+    background-color: rgb(209, 209, 209);
+    padding-left: 5px;
+    color: rgb(0, 0, 0);
+}
+
+#logo {
+    grid-area: logo;
+}
+
+#title {
+    grid-area: title;
+}
+
+#info-block {
+    grid-area: info;
+}
+
+.side-elem {
+    color: white;
+    text-align: justify;
+    padding: 5px;
+}
+
+.ban {
+    display: grid;
+    grid-template: [ban-left] "logo title" 61px [ban-right]
+    / 200px 1fr; 
+}
+
