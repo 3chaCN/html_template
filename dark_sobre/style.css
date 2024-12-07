@@ -1,0 +1,109 @@
+a {
+    text-decoration: none;
+    color:rgb(124, 124, 124);
+}
+
+a:hover {
+    color:rgb(184, 184, 184);
+}
+
+/* vertical menu */
+.list-menu {
+    padding-left: 0px;
+    list-style: none;
+}
+
+.menuitm {
+    text-decoration: none;
+    color:rgb(255, 252, 252);
+    padding: 10px;
+}
+
+.menuitm:hover {
+    color:rgb(196, 196, 196);
+}
+
+.cat {
+    padding: 20px;
+    background-color: rgb(34, 34, 34);
+}
+
+.cat:hover{
+    background-color: rgb(66, 66, 66);
+}
+
+.plain-list-v {
+    background-color: black;
+   /* position: relative;
+    left: auto; */
+    /*top: 0%;*/
+    grid-area: sidenav;
+    margin-top: 85px;
+}
+
+/* horizontal menu */
+.plain-list-h {
+    padding-left: 5px;
+    padding-bottom: 10px;
+    padding-top : 5px;
+    grid-area: nav;
+    background-color: black;
+    border-top-color: rgb(24, 24, 24);
+    border-top-style: ridge;
+    border-bottom-color: rgb(24, 24, 24);
+    border-bottom-style: ridge;
+}
+
+.body {
+    /*position: relative;
+    top: auto;*/
+    /*right: 15%;*/
+    background-color: white;
+    color:rgb(0, 0, 0);
+    grid-area: main;
+    height: 100%;
+    padding-left: 5px;
+}
+
+body {
+    background-color: black;
+    display: grid;
+    grid-template:
+        [header-left] "sidenav head" 120px [header-right]
+        [main-left] "sidenav main" 1fr [main-right]
+        [footer-left] "sidenav foot" 60px [footer-right]
+        / 200px 1fr;
+
+    font-family: "DejaVu Sans", Verdana;
+    font-size: 12px;
+    margin: 0px;
+}
+
+.plain-header {
+   /* position: relative;
+    left: 15%; */
+    background-color: white;
+    color: black;
+    grid-area: head;
+}
+
+.foot {
+    grid-area: foot;
+    background-color: rgb(41, 40, 40);
+    padding-left: 5px;
+    color: white;
+}
+
+#logo {
+    grid-area: logo;
+}
+
+#title {
+    grid-area: title;
+}
+
+.ban {
+    display: grid;
+    grid-template: [ban-left] "logo title" 61px [ban-right]
+    / 200px 1fr; 
+}
